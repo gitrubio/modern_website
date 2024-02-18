@@ -1,6 +1,7 @@
 import { people01, people02, people03, facebook, instagram, linkedin, twitter, airbnb, binance, coinbase, dropbox, send, shield, star  } from "../assets";
+import { NavInterface, client, featureInterface, feedbackInterface, footerLinkInterface, socialInterface, statsInterface } from "../interfaces/app.interfaces";
 
-export const navLinks = [
+export const navLinks : NavInterface[] = [
   {
     id: "home",
     title: "Home",
@@ -19,7 +20,7 @@ export const navLinks = [
   },
 ];
 
-export const features = [
+export const features : featureInterface[] = [
   {
     id: "feature-1",
     icon: star,
@@ -43,7 +44,7 @@ export const features = [
   },
 ];
 
-export const feedback = [
+export const feedback : feedbackInterface[] = [
   {
     id: "feedback-1",
     content:
@@ -70,25 +71,28 @@ export const feedback = [
   },
 ];
 
-export const stats = [
+export const stats : statsInterface[] = [
   {
     id: "stats-1",
     title: "User Active",
-    value: "3800+",
+    value: 3800,
+    type: '+'
   },
   {
     id: "stats-2",
     title: "Trusted by Company",
-    value: "230+",
+    value: 230,
+    type: '+'
   },
   {
     id: "stats-3",
     title: "Transaction",
-    value: "$230M+",
+    value: 230,
+    type: "M+",
   },
 ];
 
-export const footerLinks = [
+export const footerLinks : footerLinkInterface[] = [
   {
     title: "Useful Links",
     links: [
@@ -154,7 +158,7 @@ export const footerLinks = [
   },
 ];
 
-export const socialMedia = [
+export const socialMedia : socialInterface[]= [
   {
     id: "social-media-1",
     icon: instagram,
@@ -177,7 +181,7 @@ export const socialMedia = [
   },
 ];
 
-export const clients = [
+export const clients : client[] = [
   {
     id: "client-1",
     logo: airbnb,
@@ -195,3 +199,10 @@ export const clients = [
     logo: dropbox,
   },
 ];
+
+export interface FeatureProps {
+  icon:     string;
+  title:    string;
+  content:  string;
+  index :   number;
+}
